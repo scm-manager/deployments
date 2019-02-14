@@ -1,13 +1,13 @@
 # Docker
 
-Create home directory for scm-manager.
+1. Create home directory for scm-manager
 
 ```bash
 mkdir home
 chown 1000:1000 home
 ```
 
-## Start container
+2. Start container
 
 ```bash
 docker run --name scm \
@@ -22,11 +22,19 @@ or with docker-compose:
 docker-compose up
 ```
 
-After start open url at http://localhost:8080
+3. Open URL http://localhost:8080
 
-## Plugin installation
+   
 
-To install plugins to the container you have to download the **smp** files from the 2.x or 2.0.0 branches at  [oss.cloudogu.com](https://oss.cloudogu.com/jenkins/job/scm-manager/job/scm-manager-bitbucket/) and put them into home/plugins e.g.:
+#### Plugin installation
+
+To install plugins inside the scm-manager container do the following:
+
+1. Download the **smp files** from the 2.x or 2.0.0 branches at  [oss.cloudogu.com](https://oss.cloudogu.com/jenkins/job/scm-manager/job/scm-manager-bitbucket/) 
+
+2. Put them into `home/plugins`
+
+   Example:
 
 ```bash
 mkdir home/plugins
