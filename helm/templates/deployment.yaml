@@ -48,6 +48,11 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+          {{- if .Values.ssh.enabled }}
+            - name: ssh
+              containerPort: {{ .Values.ssh.port }}
+              protocol: TCP
+          {{- end }}
           livenessProbe:
             httpGet:
               path: /scm

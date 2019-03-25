@@ -34,6 +34,13 @@ ingress:
   #    hosts:
   #      - scm-manager.local
 
+ssh:
+  enabled: false
+  port: 2222
+  service:
+    type: LoadBalancer
+    port: 2222
+
 ## Enable persistence using Persistent Volume Claims
 ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 ##
